@@ -13,8 +13,6 @@ WORKDIR /bot
 
 RUN pip install --user pytelegrambotapi
 
-ENV PATH="/home/myuser/.local/bin:${PATH}"
-
-COPY --chown=myuser:myuser . /bot
+COPY --chown=bot_user:bot_user . /bot
 
 ENTRYPOINT ["python3", "bot.py"]
